@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>Firma Luis Miguel</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0b1120;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .signature-wrapper {
+      padding: 20px;
+    }
+
+    .signature-card {
+      display: flex;
+      align-items: stretch;
+      background: #000000;
+      border-radius: 14px;
+      border: 2px solid #1919A6;
+      color: #f9fafb;
+      max-width: 520px;
+      /* Para el relieve interior */
+      box-shadow: inset 0 0 0 1px #020617;
+      padding: 0;
+    }
+
+    .signature-bar {
+      width: 8px;
+      background: linear-gradient(180deg, #1919A6, #FD0000);
+      border-radius: 14px 0 0 14px;
+    }
+
+    .signature-main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 16px 18px;
+    }
+
+    .signature-block {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      align-items: flex-start;
+    }
+
+    .retro-name {
+      font-family: "Courier New", monospace;
+      font-size: 15px;
+      font-weight: 700;
+      color: #FFFF00;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .retro-role {
+      font-family: "Courier New", monospace;
+      font-size: 11px;
+      color: #38bdf8;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-top: 2px;
+    }
+
+    .retro-separator {
+      height: 1px;
+      background-color: #1e293b;
+      border: none;
+      margin: 8px 0;
+      width: 100%;
+    }
+
+    .signature-links {
+      font-size: 12px;
+      color: #e5e7eb;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      align-items: flex-start;
+    }
+
+    .signature-links a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .signature-links a.retro-link-main {
+      color: #FFFF00;
+      font-weight: 700;
+      text-transform: uppercase;
+      font-family: "Courier New", monospace;
+    }
+
+    .signature-links a:hover {
+      color: #FFFF00;
+      text-decoration: none;
+    }
+
+    /* Pac-Man escena */
+    .pacman-scene {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: radial-gradient(circle at 0 0, #111827 0, #020617 55%);
+      padding: 10px 12px;
+      border-radius: 10px;
+      margin-top: 6px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .pacman {
+      width: 28px;
+      height: 28px;
+      background: yellow;
+      border-radius: 50%;
+      position: relative;
+    }
+
+    .pacman::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 0 0, #111427 0, #111427 55%);
+      clip-path: polygon(50% 50%, 100% 0, 100% 100%);
+    }
+
+    .dots {
+      display: flex;
+      gap: 8px;
+    }
+
+    .dots span {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: #00aaff;
+    }
+
+    .ghost {
+      width: 28px;
+      height: 28px;
+      background: red;
+      border-radius: 14px 14px 6px 6px;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 4px;
+      overflow: hidden;
+    }
+
+    .ghost::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 0;
+      right: 0;
+      height: 8px;
+      background:
+        radial-gradient(circle at 4px 4px, #000 4px, transparent 5px),
+        radial-gradient(circle at 14px 4px, #000 4px, transparent 5px),
+        radial-gradient(circle at 24px 4px, #000 4px, transparent 5px);
+    }
+
+    .ghost-eyes {
+      display: flex;
+      gap: 4px;
+    }
+
+    .eye {
+      width: 8px;
+      height: 11px;
+      background: white;
+      border-radius: 50%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .pupil {
+      width: 4px;
+      height: 5px;
+      background: #0044ff;
+      border-radius: 50%;
+      position: relative;
+      left: 1px;
+    }
+
+    @media (max-width: 480px) {
+      .signature-card {
+        flex-direction: column;
+      }
+      .signature-bar {
+        height: 6px;
+        width: 100%;
+        border-radius: 14px 14px 0 0;
+      }
+      .signature-main {
+        padding-top: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+          <div class="pacman-scene">
+            <div class="pacman"></div>
+
+            <div class="dots">
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            <div class="ghost">
+              <div class="ghost-eyes">
+                <span class="eye left"><span class="pupil"></span></span>
+                <span class="eye right"><span class="pupil"></span></span>
+              </div>
+            </div>
+          </div>
